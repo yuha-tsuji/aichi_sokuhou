@@ -50,22 +50,23 @@ const Front = () => {
     }
 
     return (
-        <div>
-            <div className='container'>
-                <textarea className='form-control' name='content' placeholder='content' value={editTodo.content} onChange={handleInputChange()} required />
-                <br /><br />
-                {/* { editTodo.id ?  */}
-                {/* <button onClick={()=>updateTodo(editTodo)} className='btn btn-primary'>Update</button> : */}
-                <button onClick={()=>createNewTodo(editTodo)} className='btn btn-primary'>Create</button>
-                {/* } */}
+        <div className='container'>
+            <div>
+                <div className="row">
+                    <div className="row">
+                        <div className="input-field col s12">
+                        <textarea id="textarea1" className="materialize-textarea" name='content' value={editTodo.content} onChange={handleInputChange()} required/>
+                        <label for="textarea1">Content</label>
+                        <button onClick={()=>createNewTodo(editTodo)} className='waves-effect waves-light btn'>Create</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <ul>
+            <br />
+            <ul className="collection">
                 {
                     todos.map(todo => 
-                    <li key={todo.id} className='todo_list'>{todo.created_at}<br /> content: {todo.content}
-                    <br />
-                    {/* <button onClick={()=>deleteTodo(todo.id)} className='btn btn-primary'>Delete</button>
-                    <button onClick={()=>setEditTodo(todo)} className='btn btn-primary'>Update</button> */}
+                    <li key={todo.id} className="collection-item">{todo.created_at}<br /> content: {todo.content}
                     </li>)
                 }
             </ul>

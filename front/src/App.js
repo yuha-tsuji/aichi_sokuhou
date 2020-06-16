@@ -4,8 +4,8 @@ import Front from './components/Front';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className="">
+      <header className="">
         <Front />
       </header>
     </div>
