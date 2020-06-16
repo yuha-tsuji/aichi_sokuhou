@@ -7,4 +7,4 @@ class SokuhouSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Sokuhou
-        fields = ('content', 'created_at')
+        fields = ('id', 'content', 'created_at')
